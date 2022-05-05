@@ -1,0 +1,12 @@
+!unquoted procedure gSystem($alias, $label, $system, $layer="", $method="")
+    !$content = "<size:14>"+$system+"</size>"
+
+    !if ($layer != "")
+        !$content = $content + "\n<size:12>"+$layer+"</size>"
+    !endif
+    !if ($method != "")
+        !$content = $content + "\n<size:10>"+$method+"</size>"
+    !endif
+
+    participant "=$label\n----\n $content" as $alias
+!endprocedure
